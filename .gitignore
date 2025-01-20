@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+/*.docx
+temp_*
+.Rprofile
+latest_outputs/

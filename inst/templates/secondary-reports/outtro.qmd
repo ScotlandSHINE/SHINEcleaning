@@ -1,0 +1,544 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+:::::::::: {#cq .col .s12 .lr_zero .section .scrollspy}
+:::::: page
+::: {custom-style="Heading 1 no number"}
+Challenge Questions
+:::
+
+The aim of these challenge questions is to support interpretation of the
+data report so that it can be shared confidently among the key
+stakeholders in the
+`r ifelse(is_la_report, "Local Authority HWB", "school")` community. It
+is hoped that the ensuing discussions and
+`r ifelse(is_la_report, "support for", "")` whole-school collaborations
+in response to the data report will support improvements in
+`r ifelse(is_la_report, "young people\'s", "pupil")` wellbeing.
+
+::: {custom-style="Heading 2 No TOC"}
+Approaching the data:
+:::
+
+-   How confident
+    `r ifelse(is_la_report, "is the Local Authority HWB team", "are staff, parents and pupils")`
+    at interpreting health and wellbeing data?
+-   If using more than one data source to track and monitor health and
+    wellbeing in your
+    `r ifelse(is_la_report, "Local Authority", "school")`, are they
+    compatible and do staff confidently understand the purpose of each
+    data source? I.e. is one diagnostic; for identifying individuals
+    struggling and another one to provide evidence of the pupil
+    wellbeing context in order to understand the environment in which
+    individual pupils operate?
+-   Is there an already established meeting cycle in which to discuss
+    this `r ifelse(is_la_report, "kind of", "")` data with the relevant
+    key stakeholders? Or is a new group required?
+-   Will a smaller group be responsible for working on the whole report
+    in order to pull out the key themes for already established working
+    groups in the `r ifelse(is_la_report, "Local Authority", "school")`
+    or will the whole report be shared with everyone fully?
+
+::: {custom-style="Heading 2 No TOC"}
+Consider the context:
+:::
+
+-   How representative are the data of the
+    `r ifelse(is_la_report, "young people", "school roll or the year group(s)")`
+    surveyed? If 80% of
+    `r ifelse(is_la_report, "all young people in the Local Authority", "pupils")`
+    participated that is a very different picture to 20% of
+    `r ifelse(is_la_report, "the young people", "pupils")` taking part.
+
+-   Have you considered the number of
+    `r ifelse(is_la_report, "young people", "pupils")` taking part? If a
+    small number of `r ifelse(is_la_report, "young people", "pupils")`
+    participate, a small difference in numbers can translate to large
+    differences in percentages. For example, if you survey 10 pupils, 1
+    pupil's response will account for 10%. If you survey 100 pupils, 1
+    pupil's response will account for just 1%.
+
+-   When did
+    `r ifelse(is_la_report, "the young people", "pupils in your school")`
+    take part`r ifelse(is_la_report, " in the survey", "")`? Was it
+    during an assessment time? When
+    `r ifelse(is_la_report, "they", "pupils")` took part may also
+    influence the results.
+
+-   When comparing
+    `r ifelse(is_la_report, "the Local Authority", "your school")`
+    results to the SHINE national data Scottish HBSC national averages,
+    consider:
+
+    -   When the data has been collected; there is evidence to suggest
+        that the pandemic has negatively impacted on many young people's
+        health.
+    -   This report is benchmarked against HBSC 2022 data which was
+        collected post pandemic. There is evidence to suggest that the
+        pandemic has negatively impacted on many young people's health.
+    -   The HBSC data is for P7, S2 and S4 so some year groups may not
+        have a corresponding exact age group to compare to.
+    -   The wider
+        `r ifelse(is_la_report, "Local Authority",     "school")`
+        context may influence results, such as gender balance, resources
+        and levels of deprivation which will
+        `r ifelse(is_la_report, "", "differ from school to school     and ")`
+        impact results.
+::::::
+
+::::: page
+::: {custom-style="Heading 2 No TOC"}
+Reflecting on the data:
+:::
+
+-   To what extent do the data provide evidence of key issues for
+    `r ifelse(is_la_report, "the Local Authority", "my     school")` or
+    reveal specific priorities? Are there areas of success to celebrate
+    as well as areas of concern for focus?
+-   Are there any results that surprise you? Are there any results that
+    confirm what you already know?
+-   Have we considered the gender split in the data and year groups to
+    identify different HWB strategies for different groups?
+-   For the life happiness questions and the Social and Emotional Health
+    survey-are there some areas in which
+    `r ifelse(is_la_report,     "the young people\'s", "pupils\'")`
+    scores are lower?
+-   Are there particular patterns in
+    `r ifelse(is_la_report,     "the", "your school\'s")` data? For
+    example,
+    `r ifelse(is_la_report, "are there", "does one year group     and/or gender group have")`
+    more negative outcomes across a number of
+    measures`r ifelse(is_la_report, " in the primary or     secondary sector or relevant to a specific gender group", "")`?
+
+::: {custom-style="Heading 2 No TOC"}
+Working together:
+:::
+
+-   Have we shared the SHINE data with the wider school
+    community`r ifelse(is_la_report, "? Can we support schools to apply a whole-school approach to mental health in a uniform way across the authority? Would additional training sessions be useful for this", "")`
+    to include staff, pupils and parents to underpin a whole-school
+    approach to HWB?
+
+-   Remember, `r ifelse(is_la_report, "young people", "pupils")` may be
+    best placed to explain and interpret the data they provided.
+
+-   When considering the SHINE data, do a committee of stakeholders from
+    different parts of the
+    `r ifelse(is_la_report, "Local Authority", "school")` community take
+    part in identifying HWB priorities to take forward?
+
+-   Have we considered the year group split in the data to identify
+    whether senior pupil ambassadors (S6 or P7) could support junior
+    pupils or whether earlier intervention is required?
+
+Below is a reminder of some resources to support the interpretation and
+use of the data reports which are available to schools in the SHINE
+members' digital folder in the RESOURCES section.
+
+|  |  |
+|:------------------------------|:----------------------------------------|
+| [SHINE School Case Study Collection](https://drive.google.com/file/d/1X0cmDf5K2Zgq9zNEM0LLo3f2D6040gn6/view?usp=sharing) | A collection of school and Local Authority case studies detailing how the SHINE data reports have been used to inform and support improvement planning for mental health and wellbeing in schools. |
+| [SHINE 2020-22 mental health survey findings poster](https://drive.google.com/file/d/1eRtZ954iq2QbpUIDUjKl8HtyQ0NZUtu7/view?usp=sharing) | A poster with the key findings from the full SHINE mental health survey dataset findings from 2020-2022. This could be displayed on a school notice board or used as part of a PSE lesson. |
+| [SHINE Reflective and Challenge Questions](https://drive.google.com/file/d/1VSThPygnN89vPada6oh4VU_CsAfduA-M/view?usp=sharing) | The reflective questions can be used alongside the challenge questions to guide a more operational approach to working with the SHINE data reports. |
+| [SHINE National Primary Report 2020-2022](https://drive.google.com/file/d/1gnU1SnE0qT9rIk10dBy8aFx9QhCsSoa2/view?usp=drive_link) | This data report shows the full SHINE mental health dataset findings from 2020-2022 for all participating primary schools in Scotland. |
+| [SHINE National Secondary Report 2020-2022](https://drive.google.com/file/d/1YE69rgwjNpaP7u67R3-HxrnUclsgyvwk/view?usp=sharing) | This data report shows the full SHINE mental health dataset findings from 2020-2022 for all participating secondary schools in Scotland. |
+
+\
+
+The SHINE HWB data reports are designed to be shared across the learning
+community to facilitate a while school approach to improving pupil
+health and wellbeing. We also recommend you also consult the Scottish
+Government guidance "Mental health and wellbeing: whole school approach:
+Framework".
+<https://www.gov.scot/publications/whole-school-approach-mental-health-wellbeing/>
+:::::
+::::::::::
+
+\newpage
+
+::: {custom-style="Heading 1 no number"}
+Who can help
+:::
+
+| Organisation | Description |
+|--------------------------|----------------------------------------------|
+| MIND for better mental health https://www.mind.org.uk/information-support/for-children-and-young-people/ | MIND provides advice and support to empower anyone experiencing a mental health problem. They have information dedicated to supporting children and young people. |
+| Anna Freud National Centre for Children and Families https://www.annafreud.org/on-my-mind/ | These resources, co-produced with young people, aim to provide information to young people on mental health and wellbeing to help them make informed choices about their health. |
+| Mental Health Foundation https://mentalhealthfoundation.org/ | The Mental Health Foundation's mission is to raise awareness of mental health issues through education, community and support and thereby reducing the stigma associated with mental health. The website provides information on different mental health conditions. |
+| Barnardo's https://mymentalhealth.barnardos.org.uk/ | Barnardo's has put together a mental health hub for young people to learn about mental health issues and access support for their wellbeing. |
+| SAMH (Scottish Association for Mental Health) https://www.samh.org.uk/ | SAMH currently operates over 60 services in communities across Scotland providing services around mental health, social care, homelessness, addictions, employment services and more. The website has dedicated pages to support young people with their mental health, including resources for teachers and schools. |
+| See Me Scotland https://www.seemescotland.org/young-people | See Me is passionate about ending mental health stigma and discrimination. The organisation has produced schools resources, campaigns and information to tackle stigma and discrimination for young people. |
+| Childline https://www.childline.org.uk/ Call 0800 1111 For Me (the Childline App for young people) | Childline is a free, confidential service for anyone under 19 in the UK to assist with any issue. Support can be accessed by telephone, e-mail and through 1-2-1 counselling. |
+| Samaritans Scotland https://www.samaritans.org/scotland/how-we-can-help/schools/ | Samaritans supports schools, college communities and other youth settings across the UK and Republic of Ireland through our postvention services, lesson plans and school talks |
+| RespectMe https://respectme.org.uk/ | RespectMe envisage a "respecting, just, equal and inclusive Scotland in which all children and young people can live free from bullying and harassment and are encouraged to reach their full potential." Their work is focused on children's rights. |
+| PAPYRUS - Prevention of Young Suicide https://papyrus-uk.org/ | A national charity dedicated to the prevention of young suicide. |
+| Mental Health Foundation campaign-"Mental Health in Schools : Make it Count" https://www.mentalhealth.org.uk/projects/peer-education-project-pep/schools-resources | The foundation has developed resources to assist schools, education staff, parents and children and young people to look after their mental health. |
+| Breathing Space https://www.breathingspace.scot/ Call : 0800 838587 For the BSL service – click on the link on the website | Breathing Space provides a free national phone-line service to address serious concerns about the mental wellbeing of people in Scotland. |
+| Moodcafé http://www.moodcafe.co.uk/ | Resources for a range of mental health issues and learning disabilities developed for young people, adults and families by NHS Fife. |
+| Young Minds https://youngminds.org.uk/ | Resources and information for young people, their parents and people working with young people to support young people's mental health. |
+| Salvesen Mind Room https://www.mindroom.org/help-and-support/ | Salvesen Mindroom Centre is a Scottish charity dedicated to supporting, informing and empowering all those living with learning difficulties. It produces resources for parents and professionals and young people. |
+| Sleep Action https://www.sleepscotland.org/ Sleep Support Line: [sleepsupport\@sleepaction.org](mailto:sleepsupport@sleepaction.org) | Sleep Action aims to improve the quality of life by providing the most appropriate intervention for families of children with sleep problems. They offer a range of resources including, a Sleep Support Line and a Sound Sleep programme-training day and teaching resource manual for professionals working in schools. |
+| BLOOM https://mentalhealth-uk.org/partnerships/projects/bloom | BLOOM is the largest UK-wide programme for 14-18- year- olds which focuses on supporting young people's mental health resilience. The website features useful videos, information and resources, as well as offering training on its website. |
+| Changing Faces https://www.changingfaces.org.uk/advice-guidance/mental-health-wellbeing/ | Changing Faces is the leading UK charity for everyone with a scar, mark or condition that makes them look different. The website provides advice and guidance on mental health and wellbeing to support people living with a visible difference. There is also a link to services and support as well as teaching resources 'A world of Difference'. https://www.changingfaces.org.uk/services-support/support-information-line/ |
+| Growth Mindset https://www.winningscotland.org/mindset.html | This CPD programme is Education Scotland endorsed and GTCS accredited. It's suited to practitioners, school leaders and whole-staff teams. Applied Growth Mindset helps you build and embed a growth mindset culture throughout your learning community to improve resilience and persistence. |
+| Dove School workshops on body image: Confident Me. https://www.dove.com/uk/dove-self-esteem-project/school-workshops-on-body-image-confident-me.html | Dove has developed Confident Me, a set of evidence-based resources for teachers and schools aimed at 11-14 year olds. Aligned to promote adolescent body confidence, the free downloadable tools are designed to allow teachers and schools to run body-confidence workshops. The workshops allow teachers and pupils to explore the impact that image ideals portrayed through the media have on young people's self-esteem. |
+| The Listening Time 4 U service for schools https://listenwellscotland.org.uk/lt4u-in-schools/ | Listening Time4U(LT4U) is a free, confidential and easily accessible 1:1 listening service available for both young people and adults. LT4U in schools is provided by a LWS Registered Listener. LT4U is not a counselling service but it can prevent concerns and anxieties growing and becoming more serious. |
+
+\newpage
+
+::: {custom-style="Heading 1 no number"}
+Secondary School Questions
+:::
+
+::: {custom-style="Heading 2 No TOC"}
+General health
+:::
+
+Would you say your health is......?\
+*Excellent/Good/Fair/Poor/Prefer not to say*
+
+::: {custom-style="Heading 2 No TOC"}
+Good Childhood Index: Life satisfaction
+:::
+
+How happy are you with your life as a whole?\
+How happy are you with your relationships with your family?\
+How happy are you with the home that you live in?\
+How happy are you with how much choice you have in life?\
+How happy are you with your relationships with your friends?\
+How happy are you with the things that you have (such as money and the
+things you own)?\
+How happy are you with your health?\
+How happy are you with your appearance (the way that you look)?\
+How happy are you with what may happen to you later in your life (in the
+future)?\
+How happy are you with the school that you go to?\
+How happy are you with the things that you do in your free time?\
+*0-10 (0= not at all happy, 5 =neither happy nor unhappy, 10=very
+happy/prefer not to say)*
+
+::: {custom-style="Heading 2 No TOC"}
+WHO Wellbeing 5 Index
+:::
+
+I have felt cheerful and in good spirits /I have felt calm and relaxed/I
+have felt active and vigorous/I woke up feeling fresh and rested /My
+daily life has been filled with things that interest me\
+*At no time/Some of the time/less than half of the time/More than half
+of the time/Most of the time/All of the time/Prefer not to say*
+
+::: {custom-style="Heading 2 No TOC"}
+Strength and Difficulties Questionnaire (SDQ)
+:::
+
+[© Robert Goodman, 2005]{.col .s12}
+
+[**Emotional conduct**:]{.shine2} I get a lot of headaches, stomach-aches or
+sickness/ I worry a lot/ I am often unhappy, down-hearted or tearful/ I
+am nervous in new situations, I easily lose confidence/ I have many
+fears, I am easily scared
+
+[**Conduct problems**:]{.shine2} I get very angry and often lose my temper/
+I usually do as I am told/ I fight a lot. I can make other people do
+what I want/ I am often accused of lying or cheating/ I take things that
+are not mine from home, school or elsewhere
+
+[**Hyperactivity**:]{.shine2} I am restless, I cannot stay still for long /I
+am constantly fidgeting, or squirming/ I am easily distracted, I find it
+difficult to concentrate/ I think before I do things/ I finish the work
+I'm doing. My attention is good
+
+[**Peer relationships**:]{.shine2} I am usually on my own, I generally play
+alone or keep to myself/ I have one good friend or more/ Other people my
+age generally like me/ Other children or young people pick on me or
+bully me / I get on better with adults than with people my own age
+
+[**Pro-social**:]{.shine2} I try to be nice to other people, I care about
+their feelings/ I usually share with others (food, games, pens etc.) I
+am helpful if someone is hurt, upset or feeling ill/I am kind to younger
+children/I often volunteer to help others (parents, teachers, children)
+
+*Not true/Somewhat true/Certainly true*
+
+::: {custom-style="Heading 2 No TOC"}
+Adolescent Sleep Wake Scale
+:::
+
+When it's time to go to bed, I want to stay up and do other things/ In
+general, I am ready for bed at bedtime /In general, I try to "put off"
+or delay going to bed /When it's time to go to sleep, I have trouble
+settling down/ In general, I need help getting to sleep (for example, I
+need to listen to music, watch TV, take medication) /After waking up
+during the night, I have trouble going back to sleep/ After waking up
+during the night, I have trouble getting comfortable/ After waking up
+during the night, I need help to go back to sleep (for example: I need
+to watch TV or read) / In the morning, I wake up and feel ready to get
+up for the day. / In the morning, I wake up feeling rested and alert.\
+*Never/Once in a while/Sometimes/Quite often/Frequently, if not
+always/Always/Prefer not to say*
+
+::: {custom-style="Heading 2 No TOC"}
+School
+:::
+
+How do you feel about school at present?\
+*I like it a lot/ I like it a bit/I don't like it very much/I don't like
+it at all/Prefer not to say*
+
+How pressured (stressed) do you feel by the schoolwork you have to do?\
+*Not at all/A little/Some/A lot/Prefer not to say*
+
+How often do you feel confident in yourself?\
+*Never/Hardly ever/Sometimes/Often/Always/Prefer not to say*
+
+::: {custom-style="Heading 2 No TOC"}
+Self-harm
+:::
+
+Have you ever hurt yourself on purpose in any way?\
+*Yes/No/Prefer not to say*
+
+How many times have you done this in the last year?\
+*None/Once/2-5 times/6-10 times/More than 10 times/Don't know/Prefer not
+to say*
+
+::: {custom-style="Heading 2 No TOC"}
+Loneliness
+:::
+
+How often have you felt lonely during the past week?\
+*None of the time/some of the time/ most of the time/All of the
+time/Prefer not to say*
+
+::: {custom-style="Heading 2 No TOC"}
+Social Emotional Health Survey (SEHS)
+:::
+
+*Belief in self*\
+[**Self-efficacy**:]{.shine2} I can work out my problems/ I can do most
+things if I try/ There are many things that I do well\
+[**Self-awareness**:]{.shine2} There is a purpose to my life/ I understand
+my moods and feelings/ I understand why I do what I do\
+[**Persistence**:]{.shine2} When I do not understand something, I ask the
+teacher again and again until I understand/I try to answer all the
+questions asked in class/When I try to solve a maths problem, I will not
+stop until I find a final solution
+
+*Belief in others*\
+[**School support**:]{.shine2} At my school, there is a teacher or some
+other adult who always wants me to do my best/At my school, there is a
+teacher or some other adult who listens to me when I have something to
+say/At my school, there is a teacher or some other adult who believes
+that I will be a success\
+[**Family support**:]{.shine2} My family members really help and support one
+another/ There is a feeling of togetherness in my family/ My family
+really gets along well with each other\
+[**Peer support**:]{.shine2} I have a friend my age who really cares about
+me/I have a friend my age who talks with me about my problems/I have a
+friend my age who helps me when I'm having a hard time
+
+*Emotional competence*\
+[**Emotional regulation**:]{.shine2} I accept responsibility for my
+actions/When I make a mistake I admit it/I can deal with being told no\
+[**Empathy**:]{.shine2} I feel bad when someone gets his or her feelings
+hurt/I try to understand what other people go through/I try to
+understand how other people feel and think\
+[**Self-control**:]{.shine2} I can wait for what I want/ I don't bother
+others when they are busy/ I think before I act\
+[**Optimism**:]{.shine2} Each day I look forward to having a lot of fun/ I
+usually expect to have a good day/Overall, I expect more good things to
+happen to me than bad things
+
+*Not at all true of me/A little true of me/Pretty much true of me/Very
+much true of me/Prefer not to say*
+
+\newpage
+
+::: {custom-style="Heading 1 no number"}
+References
+:::
+
+::: {custom-style="References List"}
+1.  <https://www.gov.scot/publications/scotlands-public-health-priorities/>
+2.  Children's Society (2019) *Good Childhood Report 2019*. London.
+    Children's Society. Accessed at:
+    <https://www.childrenssociety.org.uk/sites/default/files/the_good_childhood_report_2019.pdf>
+3.  Lippman L.H., Ryberg R., Terzian M., Moore K.A., Humble J.,
+    McIntosh H. (2014) Positive and Protective Factors in Adolescent
+    Well-Being. In: Ben-Arieh A., Casas F., Frønes I., Korbin J. (eds)
+    *Handbook of Child Well-Being. Springer, Dordrecht*.
+4.  Huebner, E. S. (2004). Research on assessment of life satisfaction
+    in children and adolescents. *Social Indicators Research*. 66, 81–
+    105. 
+5.  Antaramian, S. P, Huebner, E. S., Hills, K. J. and Valois, R. F.
+    (2010). Dual-Factor Model of Mental Health: Toward a More
+    Comprehensive Understanding of Youth Functioning. *American Journal
+    of Orthopsychiatry*. 80 (4),462–472.
+6.  Greenspoon, P. J., & Saklofske, D. H. (2001). 'Toward an integration
+    of subjective wellbeing and psychopathology'. *Social Indicators
+    Research*, 54(1). 81–108.
+7.  Suldo, S. M., & Shaffer, E. J. (2008). Looking beyond
+    psychopathology: The dual factor model of mental health in youth.
+    *School Psychology Review*. 37, 52– 68.
+8.  Suldo, S., Huebner, S.,E. (2004). Does Life Satisfaction Moderate
+    the Effects of Stressful Life Events on Psychopathological Behavior
+    During Adolescence? *School Psychology Quarterly*. 19, 93–105.
+9.  Newlove-Delgado T, Marcheselli F, Williams T, Mandalia D, Davis J,
+    McManus S, Savic M, Treloar W, Ford T. (2022) *Mental Health of
+    Children and Young People in England*. 2022. NHS Digital, Leeds.
+10. Ibid
+11. <https://www.who.int/mental_health/maternal-child/adolescent/en/>
+12. Bor W, Dean A.J., Najman J., Hayatbakhsh R. (2014) Are child and
+    adolescent mental health problems increasing in the 21st century? A
+    systematic review. *Aust N Z J Psychiatry*. 48(7), 606–616.
+13. Patalay, P., Gage, S, H. (2019). Changes in millennial adolescent
+    mental health and health-related behaviours over 10 years: a
+    population cohort comparison study. *International Journal of
+    Epidemiology*. 48 (5), 1650–1664.
+14. <https://www.who.int/news-room/fact-sheets/detail/adolescent-mental-health>
+15. <https://www.samh.org.uk/documents/SAMHs_Views_Self_Harm.pdf>
+16. NHS Digital. (2018). *Mental Health of Young People and Children in
+    England*, 2017.
+17. Deighton, J., Tymms, P., Vostanis, P., Belsky, J., Fonagy, P.,
+    Brown, A., Martin, A., Patalay, P. & Wolpert, W. (2013). The
+    Development of a School-Based Measure of Child Mental Health.
+    *Journal of Psychoeducational Assessment*. 31 (3), 247–257.
+18. Waters, L. (2017). Visible wellbeing in schools: The powerful role
+    of instructional leadership. *Australian Educational Leader*. 39(1),
+    6–10.
+19. Kessler, R. C., Amminger, G. P., Aguilar-Gaxiola, S., Alonso, J.,
+    Lee, S., & Ustün, T. B. (2007). Age of onset of mental disorders: a
+    review of recent literature. *Current opinion in psychiatry*. 20(4),
+    359–364.
+20. Bor W, Dean A.J., Najman J., Hayatbakhsh R. (2014) Are child and
+    adolescent mental health problems increasing in the 21st century? A
+    systematic review. *Aust N Z J Psychiatry*. 48(7), 606–616.
+21. Greenspoon, P. J., & Saklofske, D. H. (2001). Toward an integration
+    of subjective wellbeing and psychopathology. *Social Indicators
+    Research*. 54(1), 81–108.
+22. Suldo, S. M., & Shaffer, E. J. (2008). Looking beyond
+    psychopathology: The dual factor model of mental health in youth.
+    *School Psychology Review*. 37, 52– 68.
+23. Antaramian, S. P, Huebner, E. S., Hills, K. J. and Valois, R. F.
+    (2010). Dual-Factor Model of Mental Health: Toward a More
+    Comprehensive Understanding of Youth Functioning. *American Journal
+    of Orthopsychiatry*. 80 (4),462–472.
+24. Barry, Margaret M. (2009). Addressing the Determinants of Positive
+    Mental Health: Concepts, Evidence and Practice. *International
+    Journal of Mental Health Promotion*. 11(3), 4-17.
+25. Rose, T., Joe, S., Williams, A. et al. (2017) Measuring Mental
+    Wellbeing Among Adolescents: A Systematic Review of Instruments. *J
+    Child Fam Stud* 26, 2349–2362.
+26. Seligman,, M,. & Csikszentmihalyi, M.,. (2000). Positive Psychology:
+    An Introduction. *The American psychologist*. 55. 5-14.
+27. Kim, E.K., Dowdy, E., Furlong, M.M. et al. (2019) Complete Mental
+    Health Screening: Psychological Strengths and Life Satisfaction in
+    Korean Students. *Child Indicators Research*. 12, 901–915.
+28. Wilkins, B., Boman, P. & Mergler, A. (2015). Positive psychological
+    strengths and school engagement in primary school children. *Cogent
+    Education*. 2:1.
+29. Furlong, M.,You., S., Renshaw, T.,Smith, D., & O'Malley, M. (2014).
+    Preliminary development and validation of the Social and Emotional
+    Health Survey for secondary students. *Social Indicators
+    Research*. 117. 1011–1032.
+30. Furlong, M.,You., S., Renshaw, T.,Smith, D., & O'Malley, M. (2014).
+    Preliminary development and validation of the Social and Emotional
+    Health Survey for secondary students. *Social Indicators
+    Research*. 117. 1011–1032.
+31. Huebner, E. S. (2004). Research on assessment of life satisfaction
+    in children and adolescents. *Social Indicators Research*. 66, 81–
+    105. 
+32. Children’s Society (2018) *Good Childhood Report 2018*. London.
+    Children’s Society.
+33. <https://www.sdqinfo.org/a0.html>
+34. Furlong, M. J., Dowdy, E., & Nylund-Gibson, K. (2018). *Social
+    Emotional Health Survey-Secondary Manual*. Santa Barbara, CA: UC
+    Santa Barbara International Center for School-Based Youth
+    Development. Available from, <http://www.project-covitality.info/>
+35. Furlong, M.,You., S., Renshaw, T.,Smith, D., & O'Malley, M. (2014).
+    Preliminary development and validation of the Social and Emotional
+    Health Survey for secondary students. *Social Indicators
+    Research*. 117. 1011–1032.
+36. Furlong, M. J., Dowdy, E., & Nylund-Gibson, K. (2018). *Social
+    Emotional Health Survey-Secondary Manual*. Santa Barbara, CA: UC
+    Santa Barbara International Center for School-Based Youth
+    Development. Available from, <http://www.project-covitality.info/>
+37. Scottish Government (2017). *Mental Health Strategy 2017–2027*.
+    Edinburgh: Scottish Government. Accessed at:
+    <https://www.gov.scot/publications/mental-health-strategy-2017-2027/>
+38. Parkinson, J., (2012). *Establishing a core set of national,
+    sustainable mental health indicators for children and young*. NHS
+    Health Scotland.
+39. Ibid
+40. Barry, M., M. (2009). Addressing the Determinants of Positive Mental
+    Health: Concepts, Evidence and Practice. *International Journal of
+    Mental Health Promotion*. 11(3), 4-17.
+41. Owens, J. (2014). Insufficient Sleep in Adolescents and Young
+    Adults: An Update on Causes and Consequences. *Pediatrics*. 132 (3):
+    921–932.
+42. Keyes, K.,M., Maslowsky J., Hamilton A., Schulenberg J. (2014) The
+    great sleep recession: changes in sleep duration among US
+    adolescents, 1991–2012. *Pediatrics*. 135 (3):460–480.
+43. . Bartel K.A., Gradisar M, Williamson P. (2015). Protective and risk
+    factors for adolescent sleep: a meta-analytic review. *Sleep
+    Medicine Reviews*. 21:72–85.
+44. Owens, J. (2014). Insufficient Sleep in Adolescents and Young
+    Adults: An Update on Causes and Consequences. *Pediatrics*. 132 (3):
+    921–932.
+45. Pilcher, J. J., Ginter, D. R., & Sadowsky, B. (1997). Sleep quality
+    versus sleep quantity: Relationships between sleep and measures of
+    health, well-being and sleepiness in college students. *Journal of
+    Psychosomatic Research*. 42(6): 583–596.
+46. Dewald, J. F., Meijer, A. M., Oort, F. J., Kerkhof, G. A., &
+    Bögels, S. M. (2010). The influence of sleep quality, sleep duration
+    and sleepiness on school performance in children and adolescents: A
+    meta-analytic review. Sleep Medicine Reviews, 14(3), 179–189.
+    <https://doi.org/10.1016/j.smrv.2009.10.004>
+47. O’Reilly, M., Svirydzenka, N., Adams, S. et al. (2018). Review of
+    mental health promotion interventions in schools. *Social Psychiatry
+    and Psychiatric Epidemiology*. 53: 647–642.
+48. Joyce, H., D. & Early T., J. (2014). The impact of school
+    connectedness and teacher support on depressive symptoms in
+    adolescents: A multilevel analysis. *Children and Youth Services
+    Review*. 39: 101–107.
+49. Weatherson KA, O’Neill M, Lau EY, et al. (2018). The Protective
+    Effects of School Connectedness on Substance Use and Physical
+    Activity. Journal of Adolescent Health. 63(6):724–731.
+50. Millings, A., Buck, R., Montgomery, A., Spears, M., Stallard, P.
+    (2012). School connectedness, peer attachment, and self-esteem as
+    predictors of adolescent depression. *Journal of Adolescence*. 35
+    (4): 1061–1067.
+51. Weatherson KA, O’Neill M, Lau EY, et al. (2018). The Protective
+    Effects of School Connectedness on Substance Use and Physical
+    Activity. *Journal of Adolescent Health*. 63(6):724–731.
+52. Joyce, H., D. & Early T., J. (2014). The impact of school
+    connectedness and teacher support on depressive symptoms in
+    adolescents: A multilevel analysis. *Children and Youth Services
+    Review*. 39: 101–107.
+53. Moore, G.F., Cox, R., Evans, R.E. et al. (2018). School, Peer and
+    Family Relationships and Adolescent Substance Use, Subjective
+    Wellbeing and Mental Health Symptoms in Wales: a Cross Sectional
+    Study. *Child Indicators Research*. 11: 1951–1965.
+54. Goodenow, C., & Grady, K., E. (1993). The Relationship of School
+    Belonging and Friends’ Values to Academic Motivation Among Urban
+    Adolescent Students. *The Journal of Experimental Education*. 62
+    (1): 60–71.
+55. García-Moya, I., Brooks, F., Morgan, A., & Moreno, C. (2015).
+    Subjective well-being in adolescence and teacher connectedness: A
+    health asset analysis. *Health Education Journal*. 74(6), 641–654.
+56. McCarty, C. A., Rhew, I. C., Murowchick, E., McCauley, E., & Vander
+    Stoep, A. (2011). Emotional health predictors of substance use
+    initiation during middle school. *Psychology of Addictive
+    Behaviors*. 26(2), 351.
+57. Moksnes, U.K., Løhre, A., Lillefjell, M. et al. (2016). The
+    Association Between School Stress, Life Satisfaction and Depressive
+    Symptoms in Adolescents: Life Satisfaction as a Potential Mediator.
+    *Social Indicator Research*. 125 (1): 339-357.
+58. Gillies D, Christou MA, Dixon AC, et al. Prevalence and
+    characteristics of self-harm in adolescents: meta-analyses of
+    community-based studies 1990-2015. *J Am Acad Child Adolesc
+    Psychiatry*. 2018;57:733–41.
+:::

@@ -1,0 +1,12 @@
+^SHINEcleaning\.Rproj$
+^\.Rproj\.user$
+^\.leprechaun$
+\.gitkeep
+\.github
+\.lintr
+^[^/]*\.docx$
+temp_.*\.R
+temp_.*\.xlsx
+temp_.*\.txt
+latest_outputs/
+^LICENSE\.md$
