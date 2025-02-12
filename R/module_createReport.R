@@ -123,6 +123,11 @@ createReport_server <- function(id, data) {
                           width = "100%")
               )
             },
+            if (input$output_type == "Primary cluster / Local Authority") {
+              textInput(ns("cluster_label"), "Group type (e.g. Local Authority,  Primary cluster, etc.)",
+                        value = "Local Authority",
+                        width = "100%")
+            },
             # For all reports
             textInput(ns("school_term"), "Term of survey", width = "100%"),
             numericInput(ns("n_invited"),
@@ -157,7 +162,7 @@ createReport_server <- function(id, data) {
         if (isTruthy(data())) {
           if (input$output_type %in% c("Primary", "Secondary")) {
             if (isTruthy(input$school_id) && !"All" %in% input$school_id) {
-              data() %>% filter(`School ID code` == input$school_id)
+              data() |> dplyr::filter(.data$`School ID code` == input$school_id)
             } else {
               data()
             }
@@ -167,7 +172,7 @@ createReport_server <- function(id, data) {
             "Processed report data",
             "School-level data")) {
             if (isTruthy(input$school_id) && !"All" %in% input$school_id) {
-              data() %>% filter(`School ID code` %in% input$school_id)
+              data() |> dplyr::filter(.data$`School ID code` %in% input$school_id)
             } else {
               data()
             }
@@ -192,19 +197,19 @@ createReport_server <- function(id, data) {
 
       output$preview <- renderTable({
         data_filt() |>
-          mutate(`Year group` = factor(
+          dplyr::mutate(`Year group` = factor(
             group_classes(class, class_list()),
             levels = unique(group_classes(unlist(class_list()), class_list()))
             ),
-            gender = factor(gender,
+            gender = factor(.data$gender,
                             levels = c("Girl", "Boy", "In another way"))
             ) |>
-          filter(gender %in% c("Girl", "Boy", "In another way"),
-                 class %in% unlist(class_list())) |>
-          count(gender,
-                `Year group`,
+          dplyr::filter(.data$gender %in% c("Girl", "Boy", "In another way"),
+                 .data$class %in% unlist(class_list())) |>
+          dplyr::count(.data$gender,
+                .data$`Year group`,
                 .drop = FALSE) |>
-          tidyr::pivot_wider(names_from = gender, values_from = n)
+          tidyr::pivot_wider(names_from = "gender", values_from = "n")
       })
 
 
@@ -272,14 +277,14 @@ createReport_server <- function(id, data) {
       check_vars <- reactive({
         if (input$output_type %in% c("Primary", "Primary cluster / Local Authority")) {
           upcheck_has_columns(data(), primary_vars) |>
-            filter(fail == TRUE) |>
-            select(message, level)
+            dplyr::filter(.data$fail == TRUE) |>
+            dplyr::select("message", "level")
         }
 
         if (input$output_type %in% c("Secondary", "Secondary cluster / Local Authority")) {
           upcheck_has_columns(data(), secondary_vars) |>
-            filter(fail == TRUE) |>
-            select(message, level)
+            dplyr::filter(.data$fail == TRUE) |>
+            dplyr::select("message", "level")
         }
 
       })
@@ -363,13 +368,13 @@ createReport_server <- function(id, data) {
 #        if (input$output_type %in% c("Processed report data", "School-level data")) {
         if (input$data_output_type == "Primary") {
           error <- upcheck_has_columns(data(), primary_vars) |>
-            filter(fail == TRUE) |>
-            select(message, level)
+            dplyr::filter(.data$fail == TRUE) |>
+            dplyr::select("message", "level")
         }
         if (input$data_output_type == "Secondary") {
           error <- upcheck_has_columns(data(), secondary_vars) |>
-            filter(fail == TRUE) |>
-            select(message, level)
+            dplyr::filter(.data$fail == TRUE) |>
+            dplyr::select("message", "level")
         }
 
         if (any(error$level == 3)) {
@@ -398,7 +403,11 @@ createReport_server <- function(id, data) {
 
       output$generate <- downloadHandler(
         filename = function() {
-          paste0(input$name, "_report.docx")
+          name <- input$name
+          if (name == "" | is.null(name)) {
+            name <- "unnamed_SHINE"
+          }
+          paste0(name, "_report.docx")
         },
         content = function(file) {
           showModal(modalDialog("Generating report...", footer = NULL))
@@ -430,6 +439,7 @@ createReport_server <- function(id, data) {
                   number_invited = input$n_invited,
                   gender_split = input$split,
                   term = input$school_term,
+                  cluster_label = input$cluster_label,
                   classes = class_list(),
                   output_location = NULL
                 )
@@ -477,7 +487,11 @@ createReport_server <- function(id, data) {
       # other outputs
       output$additional_output <- downloadHandler(
         filename = function() {
-          paste0(input$name, ".xlsx")
+          name <- input$name
+          if (name == "" | is.null(name)) {
+            name <- "unnamed_SHINE_output"
+          }
+          paste0(name, ".xlsx")
         },
         content = function(file) {
           showModal(modalDialog("Generating output...", footer = NULL))
