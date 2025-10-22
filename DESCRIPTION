@@ -48,3 +48,4 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 4.2.0)
 LazyData: true
+URL: https://scotlandshine.github.io/SHINEcleaning/
