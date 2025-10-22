@@ -70,17 +70,18 @@
 <p><a href="https://posit.co/download/shiny-server/" class="external-link">Shiny server</a> is a way of continually running (multiple) shiny apps on a machine, allowing users to access a remote shiny app using a web browser.</p>
 <p><a href="https://www.charlesbordet.com/en/guide-shiny-aws/" class="external-link">Here is a handy guide</a> to deploying a shiny app via a shiny server (in this case using an AWS compute instance). This can work on any remotely-accessible Linux machine.</p>
 <p>To run the installed package as an app, first create a directory for your app (e.g. <code>/home/[user]/shinemh</code>) and point to it in <code>/etc/shiny-server/shiny-server.conf</code>:</p>
-<p>```server { location / {</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>run_as [user];</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>site_dir <span class="sc">/</span>home<span class="sc">/</span>[user]<span class="sc">/</span>shinemh;</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>log_dir <span class="sc">/</span>home<span class="sc">/</span>[user]<span class="sc">/</span>shinemh<span class="sc">/</span>log;</span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>directory_index off;</span></code></pre></div>
-<p>} }</p>
-<pre><code>
-Within this new directory, create an `app.R` file which runs your app:
-</code></pre>
-<p>SHINEcleaning::run() ```</p>
+<pre><code>server {
+  location / {
+
+    run_as [user];
+    site_dir /home/[user]/shinemh;
+    log_dir /home/[user]/shinemh/log;
+
+    directory_index off;
+  }
+}</code></pre>
+<p>Within this new directory, create an <code>app.R</code> file which runs your app:</p>
+<pre><code><span><span class="fu">SHINEcleaning</span><span class="fu">::</span><span class="fu"><a href="reference/run.html">run</a></span><span class="op">(</span><span class="op">)</span></span></code></pre>
 <p>At the shiny server location (default port 3838) this should now be running the dashboard! See the above guide for walk-throughs on how to instlal/customise this.</p>
 </div>
 </div>
