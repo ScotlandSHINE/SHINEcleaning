@@ -15,11 +15,11 @@
 
 Igelström E, Baxter A (2026). *SHINEcleaning: Running a dashboard for
 the cleaning and compiling of reports from SHINE data*. R package
-version 0.3.2.
+version 0.4.0.
 
     @Manual{,
       title = {SHINEcleaning: Running a dashboard for the cleaning and compiling of reports from SHINE data},
       author = {Erik Igelström and Andy Baxter},
       year = {2026},
-      note = {R package version 0.3.2},
+      note = {R package version 0.4.0},
     }
