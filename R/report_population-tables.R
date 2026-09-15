@@ -110,7 +110,7 @@ group_classes <- function(classes, groupings) {
 
   purrr::map_chr(classes, function(old_class) {
 
-      if (is.na(old_class) | old_class == "Prefer not to say") return(NA)
+      if (is.na(old_class) || old_class == "Prefer not to say") return(NA)
 
       class_group <- purrr::keep(groupings, ~ old_class %in% .x) |> names()
 
