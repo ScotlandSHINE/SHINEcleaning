@@ -196,6 +196,7 @@ graphs <-
   ) |>
   map(censor_summary_data, "denominator") |>
   map(bar_mean_multiple_vars, xmax = 10) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 ```
 
@@ -226,6 +227,7 @@ graphs <- input_data |>
   ) |>
   map(censor_summary_data, "numerator") |>
   map(bar_proportions_multiple) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 ```
 
@@ -326,6 +328,7 @@ tables_out <- map(tables_out, \(tab) {
 
 graphs <- tables_out |>
   map(bar_share_elevated_multiple) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 
 ```
@@ -624,6 +627,7 @@ graphs <- input_data |>
     ) |>
   map(censor_summary_data, "denominator") |>
   map(bar_mean_multiple_vertical, ymax = 12) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 
 ```
@@ -647,6 +651,7 @@ graphs <- input_data |>
     ) |>
   map(censor_summary_data, "denominator") |>
   map(bar_mean_multiple_vertical, ymax = 12) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 
 ```
@@ -670,6 +675,7 @@ graphs <- input_data |>
     ) |>
   map(censor_summary_data, "denominator") |>
   map(bar_mean_multiple_vertical, ymax = 12) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 
 ```
@@ -706,6 +712,7 @@ graphs <- input_data |>
     ) |>
   map(censor_summary_data, "denominator") |>
   map(bar_mean_multiple_vertical, ymax = 12) |>
+  patchwork::align_patches() |> 
   print_first_graph()
 
 ```
