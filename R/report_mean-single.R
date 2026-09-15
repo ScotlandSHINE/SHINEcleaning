@@ -151,7 +151,9 @@ bar_mean_single <- function(summary_data, hbsc_data = NULL, ymax, ylab = "Mean")
     theme(
       legend.justification.right = "top",
       legend.title = element_blank(),
-      plot.margin = unit(c(0.8, 1, 0.5, 0), "cm")
+      plot.margin = unit(c(0.8, 1, 0.5, 0), "cm"),
+      legend.key = element_blank(),
+      legend.box.background = element_blank()
     ) +
     scale_y_continuous(ylab, expand = expansion(add = 0)) +
     geom_text(
