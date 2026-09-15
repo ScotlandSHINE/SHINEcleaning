@@ -60,6 +60,7 @@ scale_fill_hbsc <- function(...) {
       "Yes" = global_expected_colour,
       "No" = global_elevated_colour
     ),
+    labels = \(lab) stringr::str_wrap(lab, 20),
     ...
   )
 }
@@ -100,6 +101,7 @@ scale_colour_hbsc <- function(...) {
       "Boys (Scotland)" = global_boys_scotland_avg_colour,
       "Girls (Scotland)" = global_girls_scotland_avg_colour
     ),
+    labels = \(lab) stringr::str_wrap(lab, 20),
     ...
   )
 }
