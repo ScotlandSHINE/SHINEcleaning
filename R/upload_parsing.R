@@ -48,3 +48,14 @@ read_dob_column <- function(data) {
   data_out
 
 }
+
+read_la_column <- function(data) {
+  # Surveys from September '26 will have `Local Authority_26_27``
+  
+  data_out <- data
+  
+  if ("Local Authority_26_27" %in% colnames(data)) data_out$`Local Authority` = data_out$`Local Authority_26_27`
+  
+  data_out
+  
+}
