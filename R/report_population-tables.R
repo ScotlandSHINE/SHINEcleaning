@@ -179,3 +179,48 @@ tab_categories_grouped <- function(data, inc_gender, class_groupings) {
     flextable::set_table_properties(layout = "autofit", width = 1) |>
     flextable::set_caption(align_with_table = FALSE)
 }
+
+#' Table of ethnicity counts
+#'
+#' @param data Valid school input data (with columns `disc3`)
+#'
+#'
+#' @return A flextable giving ethnicity counts
+tab_ethnicity <- function(data) {
+  pnts <- sum(is.na(data$disc3) | data$disc3 == "Prefer not to say")
+
+  if (pnts) {
+    cat(
+      glue::glue(
+        "{pnts} pupil{ifelse(pnts > 1,'s','')}",
+        " did not provide details of their ethnicity. "
+      )
+    )
+  }
+
+  cat("\n")
+
+  eth_dat <- data |>
+    dplyr::filter(!(is.na(.data$disc3) | .data$disc3 == "Prefer not to say")) |>
+    dplyr::mutate(disc3 = factor(.data$disc3) |>
+                    forcats::fct_relevel("Any other ethnic background",
+                                         after = Inf) |>
+                    suppressWarnings(forcats::fct_relevel("Don't know",
+                                         after = Inf))) |>
+    dplyr::count(.data$disc3) |>
+    censor_summary_data("n") |>
+    dplyr::mutate(
+      n = dplyr::if_else(censored, "*", as.character(n))
+    )
+
+  if (any(eth_dat$censored)) {
+    cat("\n_\\* Numbers too low to show_")
+  }
+
+  eth_dat |>
+    select("Ethnicity" = .data$disc3, "Number of pupils" = .data$n) |>
+    flextable::flextable() |>
+    flextable::theme_vanilla() |>
+    flextable::set_table_properties(layout = "autofit", width = 1) |>
+    flextable::set_caption(align_with_table = FALSE)
+}
