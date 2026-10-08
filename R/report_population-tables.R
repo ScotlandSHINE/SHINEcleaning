@@ -203,10 +203,9 @@ tab_ethnicity <- function(data) {
   eth_dat <- data |>
     dplyr::filter(!(is.na(.data$disc3) | .data$disc3 == "Prefer not to say")) |>
     dplyr::mutate(disc3 = factor(.data$disc3) |>
-                    forcats::fct_relevel("Any other ethnic background",
+                    forcats::fct_relevel(c("Don't know", "Any other ethnic background"),
                                          after = Inf) |>
-                    suppressWarnings(forcats::fct_relevel("Don't know",
-                                         after = Inf))) |>
+                    suppressWarnings()) |>
     dplyr::count(.data$disc3) |>
     censor_summary_data("n") |>
     dplyr::mutate(
