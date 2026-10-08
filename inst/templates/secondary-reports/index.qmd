@@ -79,6 +79,8 @@ theme_update(
   plot.margin = unit(c(0.8, 1, 0.5, 0), "cm")
 )
 
+discrimination_qs <- any("disc1_1" == names(input_data))
+
 set_flextable_defaults(font.size = 10)
 ```
 
@@ -538,8 +540,12 @@ input_data |>
 
 \newpage
 
-```{r la-sh-page, echo=FALSE, eval = any_senior_years & nrow(senior_years) > 0, results='asis'}
+```{r la-sh-page, echo=FALSE, eval = is_la_report & any_senior_years & nrow(senior_years) > 0, results='asis'}
 cat(knitr::knit_child("la_additional_sh.qmd", envir = environment(), quiet = TRUE))
+```
+
+```{r discrimination-page, echo=FALSE, eval = discrimination_qs, results='asis'}
+cat(knitr::knit_child("discrimination_question.qmd", envir = environment(), quiet = TRUE))
 ```
 
 
