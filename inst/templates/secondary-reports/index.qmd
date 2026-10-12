@@ -538,16 +538,18 @@ input_data |>
   table_from_summary()
 ```
 
-\newpage
 
 ```{r la-sh-page, echo=FALSE, eval = is_la_report & any_senior_years & nrow(senior_years) > 0, results='asis'}
 cat(knitr::knit_child("la_additional_sh.qmd", envir = environment(), quiet = TRUE))
 ```
 
+`r if (discrimination_qs) "\\newpage"`
+
 ```{r discrimination-page, echo=FALSE, eval = discrimination_qs, results='asis'}
 cat(knitr::knit_child("discrimination_question.qmd", envir = environment(), quiet = TRUE))
 ```
 
+\newpage
 
 ## Loneliness
 
@@ -732,4 +734,3 @@ print_rest_of_graphs(graphs)
 ```{r outtro, echo=FALSE, eval = TRUE, results='asis'}
 cat(knitr::knit_child("outtro.qmd", envir = environment(), quiet = TRUE))
 ```
-
