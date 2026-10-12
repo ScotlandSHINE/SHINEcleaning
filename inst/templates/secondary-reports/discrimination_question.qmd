@@ -1,6 +1,13 @@
 ---
 ---
 
+```{r, echo = FALSE, warning = FALSE, message=FALSE}
+place_q <- input_data |>
+  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
+  pull(discrimination) |>
+  any()
+```
+
 ## Discrimination
 
 Pupils were asked whether they had faced discrimination, answering the question "How often do people make you feel bad because of:", and presented with a range of options.
@@ -49,9 +56,9 @@ input_data |>
 ```
 
 
-Pupils who reported facing discrimination were asked where this had occurred. Percentages of pupils facing discrimination by place of discrimination are shown in Figure \@ref(fig:bar-place-discrimination).
+`r if (place_q) "Pupils who reported facing discrimination were asked where this had occurred. Percentages of pupils facing discrimination by place of discrimination are shown in Figure \\@ref(fig:bar-place-discrimination)."`
 
-```{r bar-place-discrimination, fig.cap="% of pupils who face discrimination by place of discrimination"}
+```{r bar-place-discrimination, fig.cap="% of pupils who face discrimination by place of discrimination", eval = place_q}
 input_data |>
   mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |> 
   filter(discrimination) |> 
