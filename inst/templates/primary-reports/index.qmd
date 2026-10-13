@@ -62,6 +62,8 @@ term <- params$term
 classes <- params$classes |> map(str_split, " ") |> map(unlist)
 genders <- c("Boys", "Girls", "All")
 
+discrimination_qs <- any("disc1_1" == names(input_data))
+
 theme_update(
   panel.grid = element_blank(),
   legend.justification.right = "top",
@@ -449,6 +451,9 @@ input_data |>
   bar_mean_single(ymax = 64)
 ```
 
+```{r discrimination-page, echo=FALSE, eval = discrimination_qs, results='asis'}
+cat(knitr::knit_child("discrimination_question.qmd", envir = environment(), quiet = TRUE))
+```
 
 \newpage
 

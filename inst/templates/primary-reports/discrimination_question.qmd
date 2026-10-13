@@ -1,0 +1,88 @@
+---
+---
+
+\newpage
+
+## Discrimination
+
+```{r, echo = FALSE, warning = FALSE, message=FALSE}
+place_q <- input_data |>
+  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
+  pull(discrimination) |>
+  any()
+```
+
+Pupils were asked whether they had faced discrimination, answering the question "How often do people make you feel bad because of:", and presented with a range of options.
+Percentages of pupils who answered "Often or always" or "Some of the time" are shown by cause in Figure \@ref(fig:bar-face-discrimination).
+
+```{r bar-face-discrimination, fig.cap = "% of pupils who have experienced discrimination, by cause"}
+discrimination_data <- input_data |>
+  summary_proportions_multiple(
+    varslist = list(
+      disc1_4 = "Religion/Faith",
+      disc1_3 = "Disability",
+      disc1_2 = "Gender",
+      disc1_1 = "Race, skin colour, or where they were born"
+    ),
+    success = ~ .x %in% c("Often or always", "Some of the time"),
+    genders = genders,
+    classes = list(unlist(classes)),
+    .gender_split = params$gender_split
+  ) |>
+  map(censor_summary_data, "numerator")
+
+
+discrimination_data[[1]] |>
+  mutate(class = "All") |>
+  bar_proportions_multiple()
+
+```
+
+Figure \@ref(fig:bar-face-discrimination-by-class) shows proportions who have faced any discrimination, by class.
+
+
+```{r bar-face-discrimination-by-class, fig.cap="% of pupils who have experienced discrimination, by class"}
+
+input_data |>
+  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
+  create_collapsed_summary(
+    discrimination,
+    success = TRUE,
+    genders,
+    classes,
+    .gender_split = params$gender_split
+  ) |>
+  summarise(across(where(is.numeric), sum), .by = class) |>
+  mutate(gender = "All") |>
+  censor_summary_data("numerator") |>
+  bar_from_summary()
+
+```
+
+`r if (place_q) "Pupils who reported facing discrimination were asked where this had occurred. Percentages of pupils facing discrimination by place of discrimination are shown in Figure \\@ref(fig:bar-place-discrimination)."`
+
+```{r bar-place-discrimination, fig.cap="% of pupils who face discrimination by place of discrimination", eval = place_q}
+discrimination_place_data <- input_data |>
+  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
+  filter(discrimination) |>
+  mutate(across(starts_with("disc2"), ~as.character(!is.na(.x)))) |>
+  summary_proportions_multiple(
+    varslist = list(
+      `disc2_6` = "Online",
+      `disc2_5` = "In my local area",
+      `disc2_3` = "At school",
+      `disc2_3` = "On public transport",
+      `disc2_2` = "Walking to or from school",
+      `disc2_1` = "At home"
+    ),
+    success = ~ as.logical(.x),
+    genders = genders,
+    classes = list(unlist(classes)),
+    .gender_split = params$gender_split
+  ) |>
+  map(censor_summary_data, "numerator")
+
+discrimination_place_data[[1]] |>
+  mutate(class = "All") |>
+  bar_proportions_multiple()
+```
