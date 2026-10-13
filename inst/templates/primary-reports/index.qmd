@@ -451,8 +451,6 @@ input_data |>
   bar_mean_single(ymax = 64)
 ```
 
-`r if (discrimination_qs) "\\newpage"`
-
 ```{r discrimination-page, echo=FALSE, eval = discrimination_qs, results='asis'}
 cat(knitr::knit_child("discrimination_question.qmd", envir = environment(), quiet = TRUE))
 ```

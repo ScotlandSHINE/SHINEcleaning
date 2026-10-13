@@ -1,6 +1,10 @@
 ---
 ---
 
+\newpage
+
+## Discrimination
+
 ```{r, echo = FALSE, warning = FALSE, message=FALSE}
 place_q <- input_data |>
   mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
@@ -8,13 +12,12 @@ place_q <- input_data |>
   any()
 ```
 
-## Discrimination
 
 Pupils were asked whether they had faced discrimination, answering the question "How often do people make you feel bad because of:", and presented with a range of options.
 Percentages of pupils who answered "Often or always" or "Some of the time" are shown by cause in Figure \@ref(fig:bar-face-discrimination).
 
 ```{r bar-face-discrimination, fig.cap = "% of pupils who have experienced discrimination, by cause"}
-input_data |>
+discrimination_data <- input_data |>
   summary_proportions_multiple(
     varslist = list(
       disc1_5 = "Religion/Faith",
@@ -28,10 +31,12 @@ input_data |>
     classes = list(unlist(classes)),
     .gender_split = params$gender_split
   ) |>
-  map(censor_summary_data, "numerator") |>
-  map(bar_proportions_multiple) |>
-  patchwork::align_patches() |>
-  print_first_graph()
+  map(censor_summary_data, "numerator") 
+
+discrimination_data[[1]] |>
+  mutate(class = "All") |>
+  bar_proportions_multiple()
+
 ```
 
 Figure \@ref(fig:bar-face-discrimination-by-class) shows proportions who have faced any discrimination, by class.
@@ -59,7 +64,7 @@ input_data |>
 `r if (place_q) "Pupils who reported facing discrimination were asked where this had occurred. Percentages of pupils facing discrimination by place of discrimination are shown in Figure \\@ref(fig:bar-place-discrimination)."`
 
 ```{r bar-place-discrimination, fig.cap="% of pupils who face discrimination by place of discrimination", eval = place_q}
-input_data |>
+discrimination_place_data <- input_data |>
   mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
   filter(discrimination) |>
   mutate(across(starts_with("disc2"), ~as.character(!is.na(.x)))) |>
@@ -78,10 +83,12 @@ input_data |>
     classes = list(unlist(classes)),
     .gender_split = params$gender_split
   ) |>
-  map(censor_summary_data, "numerator") |>
-  map(bar_proportions_multiple) |>
-  patchwork::align_patches() |>
-  print_first_graph()
+  map(censor_summary_data, "numerator")
+
+discrimination_place_data[[1]] |>
+  mutate(class = "All") |>
+  bar_proportions_multiple()
+
 ```
 
 
