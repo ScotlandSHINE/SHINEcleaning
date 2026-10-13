@@ -30,8 +30,8 @@ input_data |>
   ) |>
   map(censor_summary_data, "numerator") |>
   map(bar_proportions_multiple) |>
-  patchwork::align_patches() |> 
-  print_first_graph() 
+  patchwork::align_patches() |>
+  print_first_graph()
 ```
 
 Figure \@ref(fig:bar-face-discrimination-by-class) shows proportions who have faced any discrimination, by class.
@@ -40,7 +40,7 @@ Figure \@ref(fig:bar-face-discrimination-by-class) shows proportions who have fa
 ```{r bar-face-discrimination-by-class, fig.cap="% of pupils who have experienced discrimination, by class"}
 
 input_data |>
-  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |> 
+  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
   create_collapsed_summary(
     discrimination,
     success = TRUE,
@@ -48,8 +48,8 @@ input_data |>
     classes,
     .gender_split = TRUE
   ) |>
-  summarise(across(where(is.numeric), sum), .by = class) |> 
-  mutate(gender = "All") |> 
+  summarise(across(where(is.numeric), sum), .by = class) |>
+  mutate(gender = "All") |>
   censor_summary_data("numerator") |>
   bar_from_summary()
 
@@ -60,10 +60,10 @@ input_data |>
 
 ```{r bar-place-discrimination, fig.cap="% of pupils who face discrimination by place of discrimination", eval = place_q}
 input_data |>
-  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |> 
-  filter(discrimination) |> 
-  mutate(across(starts_with("disc2"), ~as.character(is.na(.x)))) |> 
-  rename_with(~stringr::str_replace_all(.x, "[^a-z0-9_]", ""), starts_with("disc2")) |> 
+  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
+  filter(discrimination) |>
+  mutate(across(starts_with("disc2"), ~as.character(is.na(.x)))) |>
+  rename_with(~stringr::str_replace_all(.x, "[^a-z0-9_]", ""), starts_with("disc2")) |>
   summary_proportions_multiple(
     varslist = list(
       `disc2_6` = "Online",
@@ -80,8 +80,8 @@ input_data |>
   ) |>
   map(censor_summary_data, "numerator") |>
   map(bar_proportions_multiple) |>
-  patchwork::align_patches() |> 
-  print_first_graph() 
+  patchwork::align_patches() |>
+  print_first_graph()
 ```
 
 
