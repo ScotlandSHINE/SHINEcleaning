@@ -26,7 +26,7 @@ input_data |>
     success = ~ .x %in% c("Often or always", "Some of the time"),
     genders = genders,
     classes = list(unlist(classes)),
-    .gender_split = TRUE
+    .gender_split = params$gender_split
   ) |>
   map(censor_summary_data, "numerator") |>
   map(bar_proportions_multiple) |>
@@ -46,7 +46,7 @@ input_data |>
     success = TRUE,
     genders,
     classes,
-    .gender_split = TRUE
+    .gender_split = params$gender_split
   ) |>
   summarise(across(where(is.numeric), sum), .by = class) |>
   mutate(gender = "All") |>
@@ -62,7 +62,7 @@ input_data |>
 input_data |>
   mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
   filter(discrimination) |>
-  mutate(across(starts_with("disc2"), ~as.character(is.na(.x)))) |>
+  mutate(across(starts_with("disc2"), ~as.character(!is.na(.x)))) |>
   rename_with(~stringr::str_replace_all(.x, "[^a-z0-9_]", ""), starts_with("disc2")) |>
   summary_proportions_multiple(
     varslist = list(
@@ -76,7 +76,7 @@ input_data |>
     success = ~ as.logical(.x),
     genders = genders,
     classes = list(unlist(classes)),
-    .gender_split = TRUE
+    .gender_split = params$gender_split
   ) |>
   map(censor_summary_data, "numerator") |>
   map(bar_proportions_multiple) |>
