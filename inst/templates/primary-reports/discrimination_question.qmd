@@ -29,7 +29,7 @@ discrimination_data <- input_data |>
     classes = list(unlist(classes)),
     .gender_split = params$gender_split
   ) |>
-  map(censor_summary_data, "numerator") 
+  map(censor_summary_data, "numerator")
 
 
 discrimination_data[[1]] |>
@@ -80,12 +80,9 @@ discrimination_place_data <- input_data |>
     classes = list(unlist(classes)),
     .gender_split = params$gender_split
   ) |>
-  map(censor_summary_data, "numerator") 
+  map(censor_summary_data, "numerator")
 
 discrimination_place_data[[1]] |>
   mutate(class = "All") |>
   bar_proportions_multiple()
-
 ```
-
-
