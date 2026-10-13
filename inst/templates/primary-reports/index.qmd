@@ -107,6 +107,12 @@ tab_responses(input_data, params$number_invited)
 tab_categories(input_data, inc_gender = genders, inc_classes = classes)
 ```
 
+`r if(params$is_la_report & "disc3" %in% names(input_data)){"Table \\@ref(tab:tab-ethnicity) shows the ethnicities reported by pupils who completed the survey."}`
+
+```{r tab-ethnicity, eval = is_la_report & "disc3" %in% names(input_data), tab.id="tab-ethnicity", tab.cap="Ethnicity of survey respondents", results='asis'}
+tab_ethnicity(input_data)
+```
+
 \newpage
 
 ## General health
