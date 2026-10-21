@@ -45,7 +45,6 @@ Figure \@ref(fig:bar-face-discrimination-by-class) shows proportions who have fa
 ```{r bar-face-discrimination-by-class, fig.cap="% of pupils who have experienced discrimination, by class"}
 
 input_data |>
-  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
   create_collapsed_summary(
     discrimination,
     success = TRUE,
@@ -65,18 +64,15 @@ input_data |>
 
 ```{r bar-place-discrimination, fig.cap="% of pupils who face discrimination by place of discrimination", eval = place_q}
 discrimination_place_data <- input_data |>
-  mutate(discrimination = if_any(starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time"))) |>
   filter(discrimination) |>
-  mutate(across(starts_with("disc2"), ~as.character(!is.na(.x)))) |>
-  rename_with(~stringr::str_replace_all(.x, "[^a-z0-9_]", ""), starts_with("disc2")) |>
   summary_proportions_multiple(
     varslist = list(
-      `disc2_6` = "Online",
-      `disc2_5` = "In my local area",
-      `disc2_3` = "At school",
-      `disc2_3` = "On public transport",
-      `disc2_2` = "Walking to or from school",
-      `disc2_1` = "At home"
+      disc2_online = "Online",
+      disc2_in_my_local_area = "In my local area",
+      disc2_at_school = "At school",
+      disc2_on_public_transport = "On public transport",
+      disc2_walking_to_school = "Walking to or from school",
+      disc2_at_home = "At home"
     ),
     success = ~ as.logical(.x),
     genders = genders,
