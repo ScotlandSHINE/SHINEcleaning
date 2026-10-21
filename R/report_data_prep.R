@@ -394,7 +394,7 @@ fas_score <- function(survey_data) {
 discrimination_tidy <- function(survey_data) {
 
   survey_data |>
-    mutate(
+    dplyr::mutate(
       discrimination = dplyr::if_any(dplyr::starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time")),
       dplyr::across(dplyr::starts_with("disc2"), ~tidyr::replace_na(.x, "")),
       disc2_at_home = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "At home")),
