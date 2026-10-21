@@ -75,6 +75,7 @@ data_prep <- function(survey_data, report_type = "primary") {
       mm_score() |>
       sehs_primary() |>
       fas_score() |>
+      discrimination_tidy() |>
       dplyr::mutate(class = factor(.data$class, levels = c("P6", "P7")))
   } else if (report_type == "secondary") {
     if (!("asw1" %in% colnames(survey_out))) {
@@ -89,6 +90,7 @@ data_prep <- function(survey_data, report_type = "primary") {
       asw_score() |>
       sdq_score() |>
       fas_score() |>
+      discrimination_tidy() |>
       dplyr::mutate(class = factor(.data$class, levels = c("S1", "S2", "S3", "S4", "S5", "S6")))
   } else {
     stop(glue::glue(
@@ -386,4 +388,21 @@ fas_score <- function(survey_data) {
     dplyr::select(fas_score) |>
     dplyr::bind_cols(survey_data, x = _)
 
+}
+
+#' @rdname data_prep
+discrimination_tidy <- function(survey_data) {
+
+  survey_data |>
+    dplyr::mutate(
+      discrimination = dplyr::if_any(dplyr::starts_with("disc1"), ~.x %in% c("Often or always", "Some of the time")),
+      dplyr::across(dplyr::starts_with("disc2"), ~tidyr::replace_na(.x, "")),
+      disc2_at_home = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "At home")),
+      disc2_online = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "Online")),
+      disc2_at_school = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "At school")),
+      disc2_walking_to_school = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "Walking to or from school")),
+      disc2_on_public_transport = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "On public transport")),
+      disc2_in_my_local_area = dplyr::if_any(dplyr::starts_with("disc2"), ~stringr::str_detect(.x, "In my local area")),
+      dplyr::across(dplyr::starts_with("disc2"), as.character)
+    )
 }
