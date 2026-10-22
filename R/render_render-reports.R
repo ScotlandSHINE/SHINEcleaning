@@ -78,8 +78,16 @@ render_report <- function(survey_data,
 
   if (is_la) params$cluster_label <- cluster_label
 
+  template_dir <- system.file("templates", package = "SHINEcleaning")
+
+  work_dir <- tempfile("report_")
+  dir.create(work_dir)
+  on.exit(unlink(work_dir, recursive = TRUE), add = TRUE)
+  file.copy(list.files(template_dir, full.names = TRUE),
+            work_dir, recursive = TRUE)
+
   rmarkdown::render(
-    system.file("templates", template, package = "SHINEcleaning"),
+    file.path(work_dir, template),
     output_dir = output_location,
     envir = render_env,
     output_file = filename,
